@@ -90,43 +90,38 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="27" parent="10" name="name">
+    <column id="27" parent="10" name="email">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="28" parent="10" name="email">
+    <column id="28" parent="10" name="email_verified_at">
       <Position>3</Position>
-      <DataType>varchar|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="29" parent="10" name="email_verified_at">
-      <Position>4</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="30" parent="10" name="password">
-      <Position>5</Position>
+    <column id="29" parent="10" name="password">
+      <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="10" name="remember_token">
-      <Position>6</Position>
+    <column id="30" parent="10" name="remember_token">
+      <Position>5</Position>
       <DataType>varchar|0s</DataType>
     </column>
-    <column id="32" parent="10" name="created_at">
+    <column id="31" parent="10" name="created_at">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="32" parent="10" name="updated_at">
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="33" parent="10" name="updated_at">
-      <Position>8</Position>
-      <DataType>datetime|0s</DataType>
-    </column>
-    <index id="34" parent="10" name="users_email_unique">
+    <index id="33" parent="10" name="users_email_unique">
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="35" parent="10">
+    <key id="34" parent="10">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
