@@ -20,6 +20,11 @@ class AnswersTableSeeder extends Seeder
                 $answer->question()->associate($question);
                 $answer->save();
             });
+
+
+
+
+            
         }
     }
 }
