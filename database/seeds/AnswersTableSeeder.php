@@ -24,7 +24,7 @@ class AnswersTableSeeder extends Seeder
 
 
 
-            
+
         }
     }
 }

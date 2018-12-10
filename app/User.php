@@ -53,11 +53,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-        public function profile()
-                {
-                    return$this->hasOne('App\Profile');
+    public function profile()
+    {
+        return$this->hasOne('App\Profile');
 
-}
+    }
 
     public function questions()
     {
