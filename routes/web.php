@@ -31,3 +31,7 @@ Route::get('/questions/{question_id}/answers/{answer_id}', 'AnswerController@sho
 Route::resources([
     'questions' => 'QuestionController',
 ]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
