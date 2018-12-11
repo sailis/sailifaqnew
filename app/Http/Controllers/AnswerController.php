@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Answer;
 use App\Question;
 use Illuminate\Support\Facades\Auth;
-
 use Illuminate\Http\Request;
 
 class AnswerController extends Controller
@@ -102,7 +101,7 @@ class AnswerController extends Controller
             'body.min' => 'Body must be at least 5 characters',
 
         ]);
-        
+
         $answer = Answer::find($answer);
         $answer->body = $request->body;
         $answer->save();
