@@ -16,7 +16,7 @@
                             {!! Form::label('body', 'Body') !!}
                             {!! Form::text('body', $question->body, ['class' => 'form-control','required' => 'required']) !!}
                         </div>
-                        <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save
+                        <button class="btn btn-success float-right" value="submit" type="submit" id="submit">Save.
                         </button>
                         {!! Form::close() !!}
                     </div>
