@@ -27,7 +27,9 @@
                     <div class="card-header"><a class="btn btn-primary float-left"
                                                 href="#">
                             Answer Question
-                        </a></div>
+                        </a>
+
+                    </div>
 
                     <div class="card-body">
                         @forelse($question->answers as $answer)
@@ -36,7 +38,7 @@
                                 <div class="card-footer">
 
                                     <a class="btn btn-primary float-right"
-                                       href="#">
+                                       href="{{ route('answers.show', ['question_id'=> $question->id,'answer_id' => $answer->id]) }}">
                                         View
                                     </a>
 
@@ -53,4 +55,6 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 @endsection

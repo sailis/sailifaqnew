@@ -6,8 +6,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Questions
-                        <a class="btn btn-primary float-right" href="#">
-                            Create a Question
+                        <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
+                            create a question.
                         </a>
 
                         <div class="card-body">
@@ -20,7 +20,6 @@
                                                 <small class="text-muted">
                                                     Updated: {{ $question->created_at->diffForHumans() }}
                                                     Answers: {{ $question->answers()->count() }}
-
                                                 </small>
                                             </div>
                                             <div class="card-body">
@@ -29,29 +28,30 @@
                                             <div class="card-footer">
                                                 <p class="card-text">
 
-                                                    <a class="btn btn-primary float-right" href="#">
+                                                    <a class="btn btn-primary float-right" href="{{ route('questions.show', ['id' => $question->id]) }}">
                                                         View
                                                     </a>
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
+
                                 @empty
-                                    There are no questions to view, you can  create a question.
+
+                                    There is no question, you can create a question.
+
                                 @endforelse
-
-
-                            </div>
-
-                        </div>
-                        <div class="card-footer">
-                            <div class="float-right">
-                                {{ $questions->links() }}
                             </div>
                         </div>
-
                     </div>
+                    <div class="card-footer">
+                        <div class="float-right">
+                            {{ $questions->links() }}
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
+    </div>
 @endsection
