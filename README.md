@@ -26,3 +26,15 @@ Upload file in Answer:
 This allows the user to upload a file(text,picture or video) along with their answer to support their thoughts.
 This way, the user can explain their answer via a picture.
 
+7.Epic:
+The user accesses the website to ask questions and find answers for all their questions.
+
+8.User Story:
+(a) The user can Register or Login to create their profile on the website.
+(b) The user can create or update their profile.
+(c) The user can post (ask) questons on the website.
+(d) The user can view and edit and delete the question that they posted.
+(e) The user can upload files (text,picture or video) to support and explain their answer.
+(f) The user can view and answer a question posted by other users.
+(g) The user can also delete the answer that they posted.
+(h) The user can upload files (text,picture or video) to support and explain their question.
