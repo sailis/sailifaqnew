@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">Questions
                         <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
-                            ASK YOUR QUESTION.
+                            UPLOAD YOUR FILE.
                         </a>
 
                         <div class="card-body">
@@ -36,42 +36,13 @@
                                         </div>
                                     </div>
 
-
-
-
-
-
-
-                            </div>
-
-
-
                                 @empty
 
 
 
                                 @endforelse
 
-
-
-
-
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         </div>
                     </div>
                     <div class="card-footer">

@@ -5,7 +5,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-12-13 06:51:14.
+    * Generated on 2018-12-20 03:20:00.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -120,6 +120,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
@@ -261,6 +262,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
@@ -402,6 +404,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
@@ -543,6 +546,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
@@ -684,6 +688,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
@@ -825,6 +830,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,
@@ -966,6 +972,7 @@ namespace PHPSTORM_META {
         'events' => \Illuminate\Events\Dispatcher::class,
         'files' => \Illuminate\Filesystem\Filesystem::class,
         'filesystem' => \Illuminate\Filesystem\FilesystemManager::class,
+        'filesystem.cloud' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'filesystem.disk' => \Illuminate\Filesystem\FilesystemAdapter::class,
         'form' => \Collective\Html\FormBuilder::class,
         'hash' => \Illuminate\Hashing\HashManager::class,

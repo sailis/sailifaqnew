@@ -1,3 +1,6 @@
+
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -12,6 +15,9 @@
                         @else()
                             {!! Form::model($question, ['route' => ['questions.update', $question->id], 'method' => 'patch']) !!}
                         @endif
+
+
+
                         <div class="form-group">
                             {!! Form::label('body', 'Body') !!}
                             {!! Form::text('body', $question->body, ['class' => 'form-control','required' => 'required']) !!}
@@ -21,8 +27,36 @@
                         {!! Form::close() !!}
                     </div>
 
+
+
+
+                    <div class="card">
+                        <div class="card-header">Upload File</div>
+                        <div class="card-body">
+
+                            <form action="{{route('upload')}}" method="post"   enctype="multipart/form-data">
+                                @csrf
+                                <input type="file" name="file" class="form-control">
+                                <input type="Submit" class="btn btn-primary">
+                            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
     </div>
 @endsection
+
+
