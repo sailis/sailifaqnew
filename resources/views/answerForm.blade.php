@@ -4,6 +4,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
+
+
+
+
                 <div class="card">
                     <div class="card-header">Create Answer</div>
                     <div class="card-body">
@@ -23,6 +27,19 @@
                     </div>
 
                 </div>
+
+                <div class="card">
+                    <div class="card-header">Upload File</div>
+                    <div class="card-body">
+
+                        <form action="{{route('upload')}}" method="post"   enctype="multipart/form-data">
+                            @csrf
+                            <input type="file" name="file" class="form-control">
+                            <input type="Submit" class="btn btn-primary">
+                        </form>
+
+
+
             </div>
         </div>
     </div>
