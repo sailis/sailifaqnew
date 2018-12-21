@@ -1,33 +1,35 @@
+SAILIFAQ FEATURE: FILE UPLOAD USING AMAZON AWS S3
 
 
-
-sailifaq hiiiiii hiiiiii
 
 1.To run the FAQ Project
-
 Ensure that the pre-requisites are completed:
-
-(a). Laravel installed.
-(b). Github connected via VCS.
-(c). Heroku login completed.
-(d). Laravel Configuration.
+(a)  Laravel installed.
+(b)  Github connected via VCS.
+(c)  Heroku login completed.
+(d)  Laravel Configuration.
 2. Do git clone https://github.com/sailis/sailifaqnew.git
 The repository includes the form for uploading file on laravel. 
 3.copy .env.example to .env 
 4. Follow the steps for laravel authentication:
 5. Type the following commands in the Terminal:
-
 laravel new
 This will create a new laravel application.
 sudo apt-get install php-sqlite3
 This will install php sqlite 3 database.
-
 touch database/database.sqlite
 This will connect sqlite as the current database.
 
 Include the following in the config>database.php file:
 top:
 $heroku_db_url = parse_url(env('DATABASE_URL', "postgres://forge:forge@localhost:5432/forge"));
+
+
+
+
+
+
+
 inside the list of databases:
 'pg-heroku' => [
 'driver' => 'pgsql',
@@ -40,15 +42,14 @@ inside the list of databases:
 'schema' => 'public',
 ],
 
-
 Now, type the following commands in the terminal:
 php artisan migrate
 php artisan make:auth
 echo web: vendor/bin/heroku-php-apache2 public/ > Procfile
 This will create a Procfile with web:vendor/bin/heroku-php-apache2 public written inside it.
 Ensure that you mention public.
-Now, we create a Heroku app and create authentication for that app:
 
+Now, we create a Heroku app and create authentication for that app:
 heroku apps:create $app_name
 Mention the name of the app that you want to create.
 heroku addons:create heroku-postgresql:hobby-dev --app $app_name
@@ -62,8 +63,14 @@ And Paste the APP_KEY after the =
 This will assign the APP_KEY as the one that you pasted
 heroku config:set APP_LOG=errorlog 
 This will set an errorlog for your app.
+
+
+
+
+
 heroku config:set APP_ENV=development APP_DEBUG=true APP_LOG_LEVEL=debug
 This will set the application environment for your app.
+
 heroku config:set DB_CONNECTION=pg-heroku
 This will specify that your Database Connection is pg-heroku as we mentioned in the database.php
 
@@ -75,6 +82,15 @@ Now, migrate these changes to your app.
 	If you get an error,
 	try  
 	heroku run php artisan migrate --app (appname)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -98,6 +114,11 @@ Click on the CREATE BUCKET button
  
 
 
+
+
+
+
+
 Now fill in the details in the prompt
  
 Name your bucket.
@@ -108,6 +129,18 @@ And press NEXT.
 Press NEXT.
 Change the Permissions as follows,
  
+
+
+
+
+
+
+
+
+
+
+
+
 This will give public read access to all the contents of your bucket.
  
 
@@ -118,21 +151,51 @@ Now, click on the GET STARTED option.
  
 Here, you can add files from your computer to the bucket.
 Test the bucket by uploading files from your computer.
+
+
+
+
+
 Give the file the permission to be READ and WRITE.
  
 Grant public read access to the object.
  
 Click on NEXT.
 Keep the Encryption details as it is.
+
+
+
+
+
+
+
 Click on NEXT.
  
 Now, Click on UPLOAD.
  
+
+
+
+
+
+
+
+
+
+
 Your file will now show up inside your bucket.
  
 
 When you click on the file, you can now see the details of your file and you can Open or Download your file from the bucket.
  
+
+
+
+
+
+
+
+
 
 Now,
 Go to PHPSTORM.
@@ -143,6 +206,9 @@ And make the following changes.
  
 Now, make the following changes to your web.php:
  
+
+
+
 This will change your current welcome page to the FileUpload page.
 (b) You could also insert the FileUpload Form in your questionForm.blade.php
  
@@ -160,10 +226,14 @@ Route:: post('upload',function() {
 
 })->name('upload');
 
-
 This will create a route which specifies that :
-Name of file uploaded and stored will be 'my-file'
-The file will be uploaded and stored on 's3'
+-Name of file uploaded and stored will be 'my-file'
+-The file will be uploaded and stored on 's3'
+
+
+
+
+
 Now, include the following in your .env file:
 AWS_ACCESS_KEY_ID= ###############
 AWS_SECRET_ACCESS_KEY= ###############
@@ -177,8 +247,9 @@ Click on Get Started with IAM Users.
 And Click on ADD USER.
 Name the User and give it Programmatic access.
  
-
 Click on NEXT.
+
+
 NOW, Click on ACCESS EXISTING POLICIES DIRECTLY.
 This will give you several options.
 Search for 's3'.
@@ -191,12 +262,33 @@ Copy them and paste them inside your .env file accordingly.
 Also, enter the bucket name.
 To find the correct format of mentioning your region, go to 
 https://docs.aws.amazon.com/general/latest/gr/rande.html#ec2_region
+
+
+
+
+
+
+
+
+
+
+
+
 Now find your geographical region and follow the format.
 for eg.
  
 
 To enter your AWS_URL, follow the format
  
+
+
+
+
+
+
+
+
+
 
 Finally,
 Go to 
@@ -213,10 +305,14 @@ try installing the following packages:
 composer require phpspec/phpspec
 composer require henrikbjorn/phpspec-code-coverage
 composer require league/flysystem
-
 Now try installing the aws package again.
 composer require league/flysystem-aws-s3-v3
 It will work now.
+
+
+
+
+
 
 Now,
 Finally 
@@ -227,12 +323,16 @@ You will get your laravel app with a file upload form.
 After Uploading the file,
 You may get a blank screen.
  
-
 To verify if your Upload has worked,
 Go to your Amazon AWS S3 console,
 click on the Bucket and you can see the File(s) you uploaded.
 
  
+
+
+
+
+
 
 When you click on the file,
 You have the option to OPEN, DOWNLOAD etc
@@ -246,24 +346,54 @@ YAYIE! IT WORKS!
 
 
 
-6.FEATURE:
-Upload file in Question:
-This allows the user to include a file(text,picture or video) along with their question to support their doubts.
-This way, if the user has a doubt related to the picture, they can upload the picture to point out their issue.
 
-Upload file in Answer:
-This allows the user to upload a file(text,picture or video) along with their answer to support their thoughts.
-This way, the user can explain their answer via a picture.
 
-7.Epic:
-The user accesses the website to ask questions and find answers for all their questions.
 
-8.User Story:
-(a) The user can Register or Login to create their profile on the website.
-(b) The user can create or update their profile.
-(c) The user can post (ask) questons on the website.
+
+FEATURE: 
+Upload file in Question: This allows the user to include a file(text, picture or video) along with their question to support their doubts. This way, if the user has a doubt related to the picture, they can upload the picture to point out their issue.
+Upload file in Answer: This allows the user to upload a file(text, picture or video) along with their answer to support their thoughts. This way, the user can explain their answer via a picture.
+
+USER ACTIONS:
+ (a) The user can Register or Login to create their profile on the website. 
+(b) The user can create or update their profile. 
+(c) The user can post (ask) questions on the website. 
 (d) The user can view and edit and delete the question that they posted.
-(e) The user can upload files (text,picture or video) to support and explain their answer.
-(f) The user can view and answer a question posted by other users.
-(g) The user can also delete the answer that they posted.
-(h) The user can upload files (text,picture or video) to support and explain their question.
+ (e) The user can upload files (text, picture or video) to support and explain their answer.
+ (f) The user can view and answer a question posted by other users. 
+(g) The user can also delete the answer that they posted. 
+(h) The user can upload files (text, picture or video) to support and explain their question.
+EPIC:
+A user can access the website to view and ask questions and also answer questions posted by other users.
+
+
+
+
+
+USER STORIES:
+
+1.	As user ,
+I want to register my account ,
+so that I can access the website.
+
+2.	As user ,
+I want to login to my account ,
+so that I can access the website.
+
+3.	As user who wants to ask a question ,
+I want to post a question ,
+so that I can get an answer from other users.
+
+4.	As user who wants to ask a question ,
+I want to upload a file ,
+so that other users can understand my problem and I can get an answer from other users.
+
+5.	As user who wants to answer a question ,
+I want to post an answer ,
+so that I can solve the problems of other users.
+
+6.	As user who wants to answer a question ,
+I want to upload a file ,
+so that I can solve the problems of other users with details about my answer.
+
+
