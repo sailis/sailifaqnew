@@ -2,8 +2,11 @@
 
 
 sailifaq hiiiiii hiiiiii
+
 1.To run the FAQ Project
+
 Ensure that the pre-requisites are completed:
+
 (a). Laravel installed.
 (b). Github connected via VCS.
 (c). Heroku login completed.
